@@ -1,26 +1,35 @@
-from distutils.core import setup
+import pathlib
+from setuptools import setup
+
+# The directory containing this file
+HERE = pathlib.Path(__file__).parent
+
+# The text of the README file
+README = (HERE / "README.md").read_text()
+
+# This call to setup() does all the work
 setup(
-  name = 'Topsis-Snehil-101903064',         # How you named your package folder (MyLib)
-  packages = ['Topsis-Snehil-101903064'],   # Chose the same as "name"
-  version = '0.2',      # Start with a small number and increase it with every change you make
-  license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
-  description = 'Implements Topsis for the given datafile and returns topsis score and rank.',   # Give a short description about your library
-  author = 'Snehil Gupta',                   # Type in your name
-  author_email = 'sgupta2_be19@thapar.edu',      # Type in your E-Mail
-  url = 'https://github.com/Snehil-21/Topsis-Snehil-101903064',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/Snehil-21/Topsis-Snehil-101903064/archive/refs/tags/v_02.tar.gz',    # I explain this later on
-  keywords = ['Topsis', 'Rank Ordering', 'Data Science'],   # Keywords that define your package best
-  install_requires=[            # I get to this in a second
-          'pandas',
-      ],
-  classifiers=[
-    'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
-    'Intended Audience :: Developers',      # Define that your audience are developers
-    'Topic :: Software Development :: Build Tools',
-    'License :: OSI Approved :: MIT License',   # Again, pick a license
-    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
-  ],
+    name="Topsis-Snehil-101903064",
+    version="1.0.0",
+    description="Implements topsis on the given input data file and generates topsis score and ranks accordingly.",
+    long_description=README,
+    long_description_content_type="text/markdown",
+    url="https://github.com/Snehil-21/Topsis-Snehil-101903064",
+    author="Snehil Gupta",
+    author_email="sgupta2_be19@thapar.edu",
+    license="MIT",
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+    ],
+    packages=["topsis"],
+    include_package_data=True,
+    install_requires=['pandas'],
+    entry_points={
+        "console_scripts": [
+            "topsis=topsis.__main__:main",
+        ]
+    },
 )

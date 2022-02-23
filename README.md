@@ -1,22 +1,17 @@
 # Topsis-Snehil-101903064
 
-Topsis-Snehil-101903064 is a command line python tool to implement topsis on the input datafile and generate topsis score and rank.
+Topsis implementation in python. Used as a command line tool to generate topsis score and ranks of the given input data file along with weights and impacts.
 
 ## Installation
 
-```sh
-cd <project_directory>
-pip install Topsis-Snehil-101903064
-```
+`pip install Topsis-Snehil-101903064`
 
-## Usage:
+## How to use it?
 
-```sh
-python Topsis-Snehil-101903064 <inputfile.csv> <"weights"> <"impacts"> <outputfile.csv>
-```
+Open the terminal / cmd and type topsis <input_filename.csv> <"Weights"> <"Impacts"> <output_filename.csv>
 
 ## License
 
-MIT
+© 2022 Snehil Gupta
 
-**Free Software!**
+This repository is licensed under the MIT license. See LICENSE for details.
