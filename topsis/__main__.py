@@ -4,7 +4,7 @@ import pandas as pd
 import math
 
 try:
-    def topsis():
+    def main():
         if len(sys.argv) != 5:
             raise Exception('Usage: python <program.py> <InputDataFile.csv> <Weights> <Impacts> <output.csv>')
         
@@ -84,7 +84,7 @@ try:
         df.to_csv(outputfile, index=False)
     
     if __name__ == '__main__':
-        topsis()
+        main()
 
 except Exception as e:
     print(e)
