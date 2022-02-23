@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="Topsis-Snehil-101903064",
-    version="1.0.0",
+    version="2.0.0",
     description="Implements topsis on the given input data file and generates topsis score and ranks accordingly.",
     long_description=README,
     long_description_content_type="text/markdown",
